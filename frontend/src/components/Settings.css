@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Main Container */
+.url-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(153, 0, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glowing Text */
+.glowing-text {
+  font-size: 3rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(153, 0, 255, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(153, 0, 255, 0.7), 0 0 20px rgba(153, 0, 255, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(153, 0, 255, 0.7), 0 0 20px rgba(153, 0, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(153, 0, 255, 1), 0 0 30px rgba(153, 0, 255, 0.8);
+  }
+}
+
+/* Setting Items */
+.setting-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.setting-item label {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #b780ff;
+}
+
+.setting-item select {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(153, 0, 255, 0.5);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.setting-item select:hover, .setting-item select:focus {
+  border-color: rgba(153, 0, 255, 1);
+  box-shadow: 0 0 10px rgba(153, 0, 255, 0.5);
+}
+
+/* Check Button */
+.check-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, rgba(153, 0, 255, 1) 0%, rgba(51, 0, 153, 1) 100%);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(153, 0, 255, 0.5);
+}
+
+.check-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(153, 0, 255, 0.8);
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.check-btn:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* Back Button */
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: transparent;
+  border: 2px solid rgba(153, 0, 255, 0.5);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(153, 0, 255, 0.3);
+}
+
+.back-btn:hover {
+  background: rgba(153, 0, 255, 0.2);
+  border-color: rgba(153, 0, 255, 1);
+  box-shadow: 0 0 20px rgba(153, 0, 255, 0.8);
+}
+
+.back-arrow {
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover .back-arrow {
+  transform: translateX(-5px);
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Main Container */
+.url-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(153, 0, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Glowing Text */
+.glowing-text {
+  font-size: 3rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(153, 0, 255, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(153, 0, 255, 0.7), 0 0 20px rgba(153, 0, 255, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(153, 0, 255, 0.7), 0 0 20px rgba(153, 0, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(153, 0, 255, 1), 0 0 30px rgba(153, 0, 255, 0.8);
+  }
+}
+
+/* Sections */
+.tips-section, .examples-section, .external-links {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.tips-section h2, .examples-section h2, .external-links h2 {
+  font-size: 1.5rem;
+  color: #b780ff;
+  margin-bottom: 10px;
+}
+
+.tips-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.tips-section li {
+  font-size: 1rem;
+  margin: 5px 0;
+  text-shadow: 0 0 5px rgba(153, 0, 255, 0.5);
+}
+
+.examples-section p {
+  font-size: 1rem;
+  text-shadow: 0 0 5px rgba(153, 0, 255, 0.5);
+}
+
+.external-links a {
+  color: #b780ff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.external-links a:hover {
+  color: #ff80bb;
+  text-shadow: 0 0 10px rgba(255, 128, 187, 0.8);
+}
+
+/* Back Button */
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: transparent;
+  border: 2px solid rgba(153, 0, 255, 0.5);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(153, 0, 255, 0.3);
+}
+
+.back-btn:hover {
+  background: rgba(153, 0, 255, 0.2);
+  border-color: rgba(153, 0, 255, 1);
+  box-shadow: 0 0 20px rgba(153, 0, 255, 0.8);
+}
+
+.back-arrow {
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover .back-arrow {
+  transform: translateX(-5px);
+}

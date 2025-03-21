@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #000016; /* Deep cyberpunk background */
+  height: 100vh;
+  overflow: hidden;
+  color: #00ffea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.home-container {
+  text-align: center;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 20px #ff00ff;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+/* Animated Background */
+.background-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, rgba(10, 10, 40, 0.9) 30%, rgba(2, 1, 10, 1) 90%);
+  z-index: -1;
+  animation: flickerBg 3s infinite alternate;
+}
+
+@keyframes flickerBg {
+  0% { background-color: #02010a; }
+  100% { background-color: #050014; }
+}
+
+/* Neon Glowing Text */
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff00ff;
+  text-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff, 0 0 50px #ff00ff;
+  animation: neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% { text-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff, 0 0 50px #ff00ff; }
+  100% { text-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ff00ff; }
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #00ffea;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+/* Buttons with Cyberpunk Glow */
+.start-btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(145deg, #00ffff, #00ffcc);
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffff;
+  color: #0a0a0a;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.start-btn:hover {
+  background: linear-gradient(145deg, #00ffcc, #00ffff);
+  box-shadow: 0 0 25px #00ffff;
+  transform: scale(1.1);
+}

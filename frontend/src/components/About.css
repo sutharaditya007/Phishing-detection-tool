@@ -1,0 +1,54 @@
+/* About.css - Cyberpunk Grid Design */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle, rgba(10, 10, 40, 0.9) 30%, rgba(2, 1, 10, 1) 90%);
+  color: #00ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.url-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.content-wrapper {
+  padding: 50px;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.glowing-text {
+  font-size: 2.5rem;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffcc;
+  animation: neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% { text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffcc; }
+  100% { text-shadow: 0 0 25px #00ffff, 0 0 40px #00ffcc; }
+}
+
+.back-btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background: linear-gradient(145deg, #00ffff, #00ffcc);
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffff;
+  color: #0a0a0a;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+  background: linear-gradient(145deg, #00ffcc, #00ffff);
+  box-shadow: 0 0 25px #00ffff;
+  transform: scale(1.1);
+}

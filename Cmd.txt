@@ -1,0 +1,3 @@
+backend:-- Venv :-- venv\Scripts\activate   ------>   python app.py
+frontend:-- yarn start / npm start
+electron:-- npm electron-start 

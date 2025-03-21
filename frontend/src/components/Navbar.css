@@ -1,0 +1,58 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensures full width */
+  height: 70px; /* Adjust height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+/* Navbar brand/title */
+.navbar-brand h2 {
+  font-size: 1.8rem;
+  color: #b780ff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 15px rgba(153, 0, 255, 1);
+}
+
+/* Navbar links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-links li button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid rgba(153, 0, 255, 0.8);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(153, 0, 255, 0.6);
+}
+
+/* Futuristic glowing effect */
+.navbar-links li button:hover {
+  background: rgba(153, 0, 255, 0.2);
+  border-color: rgba(153, 0, 255, 1);
+  box-shadow: 0 0 20px rgba(153, 0, 255, 1);
+  transform: scale(1.1);
+}
+
+/* Body padding to prevent overlap */
+body {
+  padding-top: 80px;
+  background: #0d0d1a;
+}

@@ -1,0 +1,32 @@
+.app-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input-field {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  text-align: center;
+}
+
+.check-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.result-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: white;
+}
